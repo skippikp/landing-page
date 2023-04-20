@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/landing-page/static/css/main.70534b34.css",
+    "main.js": "/landing-page/static/js/main.fadd1e9e.js",
+    "static/media/groundTop.jpg": "/landing-page/static/media/groundTop.dd6126b0c88b03e9d9a6.jpg",
+    "static/media/groundBottom.jpg": "/landing-page/static/media/groundBottom.08d0ba5f4948325cd790.jpg",
+    "static/media/conversion.png": "/landing-page/static/media/conversion.a7f3042a70bbd75246d2.png",
+    "static/media/software.png": "/landing-page/static/media/software.cf72dda492221972ff11.png",
+    "static/media/support.png": "/landing-page/static/media/support.668df4a9d17af236a264.png",
+    "static/media/promo.png": "/landing-page/static/media/promo.e23ac44732a77204e88a.png",
+    "static/media/cpa.png": "/landing-page/static/media/cpa.25f38c382b44aec4fe6b.png",
+    "static/media/revshare.png": "/landing-page/static/media/revshare.28f41681f4769da99c9f.png",
+    "static/media/payments.png": "/landing-page/static/media/payments.808fd5b6c2f75126c0ac.png",
+    "static/media/success.png": "/landing-page/static/media/success.2fa0a5d0af0d84b664e6.png",
+    "static/media/tes.png": "/landing-page/static/media/tes.444fea868165cb2f1778.png",
+    "static/media/blockchain.png": "/landing-page/static/media/blockchain.8478958580e859e6f67f.png",
+    "index.html": "/landing-page/index.html",
+    "main.70534b34.css.map": "/landing-page/static/css/main.70534b34.css.map",
+    "main.fadd1e9e.js.map": "/landing-page/static/js/main.fadd1e9e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.70534b34.css",
+    "static/js/main.fadd1e9e.js"
+  ]
+}
