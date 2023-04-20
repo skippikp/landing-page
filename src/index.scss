@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;800&display=swap');
+@import './styles/variables.scss';
+@import './styles/mixins.scss';
+
+* {
+  box-sizing: border-box;
+  letter-spacing: -0.03em;
+  font-family: Mulish, sans-serif;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+  color: #fff;
+  background-image: url(assets/groundTop.jpg), url(assets/groundBottom.jpg);
+  background-size: 100%, 100%;
+  background-color: rgba(16, 16, 47, 1);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top, bottom;
+  @media (min-width: $desktop-1680) and (max-width: $desktop-1920) {
+    background-size: 100vw 1560px, 100vw 800px;
+  }
+  @media (min-width: $desktop-1440) and (max-width: $desktop-1680) {
+    background-size: 100vw 1365px, 100vw 700px;
+  }
+  @media (min-width: $desktop-1200) and (max-width: $desktop-1440) {
+    background-size: 100vw 1170px, 100vw 600px;
+  }
+  @media(min-width: $mobile) and (max-width: $desktop-1200) {
+    background-size: 100vw 1170px, 100vw 600px;
+  }
+  @media (max-width: $mobile) {
+    background-size: 560px 670px, 560px 344px;
+    background-position-x: -5%;
+  }
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+h1 {
+  font-size: 46px;
+  line-height: 48px;
+  letter-spacing: -0.03em;
+
+  @media screen and (max-width: $mobile) {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 800;
+  }
+}
+
+h3 {
+  font-size: 26px;
+  line-height: 32px;
+  letter-spacing: -0.03em;
+
+  @media screen and (max-width: $mobile) {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 800;
+  }
+}
+
+p {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -0.03em;
+
+  @media screen and (max-width: $mobile) {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
+button {
+  @media screen and (max-width: $mobile) {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
+.text_massive {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.text_mini {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.text_gray {
+  color: $gray;
+}
+
+.text_yellow {
+  color: $yellow;
+}
+
+.btn {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFF;
+  background-color: transparent;
+  padding: 9px 16px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  @media screen and (max-width: $desktop-1200) {
+    padding: 9px 15px;
+  }
+}
+
+.btn-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  gap: 12px;
+}
+
+.btn_dark {
+  @include glassPlateBlack;
+  position: relative;
+  background-color: $plate-dark;
+  border-radius: 4px;
+  border: 1px solid rgba(184, 184, 227, 0.08);
+  overflow: hidden;
+  &::before {
+    @include reflection;
+    content: '';
+    top: 0;
+    left: -55%;
+  }
+  &::after {
+    @include reflection;
+    content: '';
+    top: 0;
+    left: -75%
+  }
+}
+
+.btn_gold {
+  @include glassPlateGold;
+  position: relative;
+  background-color: $yellow;
+  color:black;
+  border-radius: 4px;
+  border: none;
+  overflow: hidden;
+  &::before {
+    @include reflection;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+    content: '';
+    top: 0;
+    left: -55%;
+  }
+  &::after {
+    @include reflection;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+    content: '';
+    top: 0;
+    left: -75%;
+  }
+}
+
+.btn_inactive {
+  &:hover {
+    border: 1px solid rgba(252, 178, 35, 0.2);
+  }
+}
+
+.container {
+  & h1 {
+    max-width: 440px;
+    text-align: left;
+    @media screen and (max-width: $desktop-1200) {
+      max-width: 50%;
+    }
+  }
+  grid-column-start: 2;
+  @media screen and (max-width: $desktop-1200) {
+    padding: 0 16px;
+    grid-column-start: 1;
+  }
+}

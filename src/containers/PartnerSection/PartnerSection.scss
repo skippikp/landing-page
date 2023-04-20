@@ -1,0 +1,105 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.partner {
+  @include main-container;
+  margin: 120px 0;
+  @media screen and (max-width: $desktop-1200) {
+    margin: 16px 0;
+    & h1 {
+      max-width: 90%;
+    }
+  }
+}
+
+.partner__cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 24px;
+  .partner__form-container {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    & .reflection {
+      left: -53%;
+      & .reflection_2 {
+        left: -140px;
+      }
+      & .reflection_3 {
+        left: -110px;
+      }
+    }
+    & .success-message {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 32px;
+      gap: 16px;
+      & h3 {
+        color: $yellow;
+        margin: 0;
+      }
+      & p {
+        margin-top: 0;
+      }
+    }
+  }
+  @media screen and (max-width: $desktop-1200) {
+    grid-template-columns: 1fr 1fr;
+    .partner__form-container {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 3;
+    }
+  }
+}
+
+.partner__card {
+  display: flex;
+  padding: 32px;
+  & div {
+    max-width: 144px;
+  }
+  & h3 {
+    color: $yellow;
+    margin-top: 0;
+  }
+  & p {
+    margin-bottom: 0;
+  }
+  & img {
+    position: absolute;
+    right: -20px;
+    height: 160px;
+    width: 160px;
+  }
+  .partner__card__number {
+    font-size: 200px;
+    line-height: 200px;
+    font-weight: 800;
+    transform: rotate(15.5deg);
+    position: absolute;
+    right: -35px;
+    bottom: -40px;
+  }
+  @media screen and (max-width: $desktop-1200) {
+    padding: 16px;
+    & .partner__card__number {
+      font-size: 120px;
+      line-height: 120px;
+      right: -25px;
+      bottom: -30px;
+    }
+    & img {
+      position: absolute;
+      right: -50%;
+      top: calc(50% - 65px);
+      height: 160px;
+      width: 160px;
+    }
+  }
+}

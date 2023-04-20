@@ -1,0 +1,10 @@
+export { HomeIcon } from './HomeIcon';
+export { TelegramIcon } from './TelegramIcon';
+export { BenefitsIcon } from './BenefitsIcon';
+export { ContactIcon } from './ContactIcon';
+export { MailIcon } from './MailIcon';
+export { FaqIcon } from './FaqIcon';
+export { ManIcon } from './ManIcon';
+export { MenuIcon } from './MenuIcon';
+export { EyeIcon } from './EyeIcon';
+export { ExitIcon } from './ExitIcon';

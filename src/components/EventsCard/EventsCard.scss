@@ -1,0 +1,60 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.event-card {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  background-color: $plate-dark;
+  border-radius: 4px;
+  border: 1px solid rgba(184, 184, 227, 0.08);
+  max-width: 302px;
+  max-height: 240px;
+}
+
+.event-card__text {
+  padding: 32px;
+  & h3, p {
+    margin: 0;
+  }
+  @media screen and (max-width: $desktop-1200) {
+    padding: 8px 16px 16px 16px;
+    & h3 {
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 18px;
+    }
+    & p {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+}
+
+.event-card__image-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 0 16px;
+  height: 100%;
+  & img {
+    align-self: center;
+    max-width: 75%;
+    max-height: 75%;
+  }
+  @media screen and (max-width: $desktop-1200) {
+    & .reflection {
+      left: -20%;
+      height: 200%;
+      width: 150%;
+    }
+    & .reflection_2 {
+      left: -50%;
+      height: 150%;
+      position: relative;
+    }
+  }
+}

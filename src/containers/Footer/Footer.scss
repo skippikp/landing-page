@@ -1,0 +1,86 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.footer {
+  @include main-container;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  padding: 48px 0;
+  gap: 32px;
+  justify-content: space-between;
+  @media screen and (max-width: $desktop-1200) {
+    justify-content: center;
+  }
+}
+
+.footer__left-side, .footer__lang, .footer__contact, .footer__actions {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  & .footer__lang_mobile {
+    display: none;
+  }
+}
+
+.footer__actions {
+  & p {
+    cursor: pointer;
+  }
+  & .text_gray:hover {
+    color: $yellow;
+  }
+}
+
+.footer__left-side {
+  @media screen and (max-width: $desktop-1200) {
+    flex-direction: column-reverse;
+    gap: 16px;
+    & .footer__contact, .footer__actions, .footer__lang_mobile {
+      gap: 16px;
+    }
+    & .footer__lang_mobile {
+      display: flex;
+    }
+    & p {
+      margin: 0;
+    }
+  }
+}
+
+.footer__lang {
+  & p {
+    cursor: pointer;
+  }
+  & .text_gray:hover {
+    color: $yellow;
+  }
+  @media screen and (max-width: $desktop-1200) {
+    display: none;
+  }
+}
+
+.footer__telegram, .footer__mail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  &:hover * {
+    color: $yellow;
+    fill: $yellow;
+  }
+}
+
+.logo_mobile {
+  display: none;
+}
+
+@media screen and (max-width: $desktop-1200) {
+  .logo {
+    display: none;
+  }
+  .logo_mobile {
+    display: block;
+  }
+}

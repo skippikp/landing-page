@@ -1,0 +1,19 @@
+.file-attach-container {
+  position:relative;
+  & input {
+    display: none;
+  }
+  & .file-attach {
+    position: absolute;
+    & .text_yellow:hover {
+      color: #FFF;
+    }
+    & .file-attach__btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    cursor: pointer;
+    right: 0;
+  }
+}

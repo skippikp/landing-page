@@ -1,0 +1,45 @@
+@import '../../styles/variables.scss';
+
+.partner__form {
+  padding: 32px;
+  flex-wrap: wrap;
+  flex: 1;
+  position: relative;
+  display: flex;
+  gap: 16px;
+  .textarea {
+    & textarea {
+      height: 74px;
+      resize: none;
+    }
+  }
+  .terms-container {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  & > div {
+    flex-basis: calc((100% / 2) - 8px);
+  }
+  & .file-attach-container {
+    flex-basis: 100%;
+  }
+  @media screen and (max-width: $desktop-1200) {
+    flex-direction: column;
+    padding: 16px;
+    .terms-container {
+      flex-direction: column;
+      & .btn_gold::before {
+        left: -85%;
+      }& .btn_gold::after {
+        left: -95%;
+      }
+      & button {
+        width: 100%;
+      }
+    }
+  }
+}
+

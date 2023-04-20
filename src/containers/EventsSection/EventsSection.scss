@@ -1,0 +1,26 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.events {
+  @include main-container;
+  margin: 120px 0;
+  & .title {
+    color: $yellow;
+  }
+  @media screen and (max-width: $desktop-1200) {
+    margin: 16px 0;
+    & h1 {
+      max-width: 90%;
+    }
+  }
+}
+
+.events__cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  @media screen and (max-width: $desktop-1200) {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+}

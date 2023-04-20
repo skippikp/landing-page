@@ -1,0 +1,33 @@
+@import '../../../styles/mixins.scss';
+@import '../../../styles/variables.scss';
+
+.checkbox {
+  & label {
+    @include mini-text;
+    color: $gray;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  & input {
+    appearance: none;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    background-color: $plate-dark;
+    border-radius: 4px;
+    border: 1px solid rgba(184, 184, 227, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:checked:after {
+      content: '';
+      display: block;
+      height: 12px;
+      width: 12px;
+      border-radius: 1px;
+      background-color: $yellow;
+    }
+  }
+}

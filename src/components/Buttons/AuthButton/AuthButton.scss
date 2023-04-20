@@ -1,0 +1,15 @@
+@import '../../../styles/variables.scss';
+
+.auth-btn {
+  font-size: 16px;
+  font-weight: 700;
+  @media (max-width: $desktop-1200) {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+}
+
+.auth-btn__content {
+  gap: 8px;
+}

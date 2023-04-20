@@ -1,0 +1,63 @@
+@import '../../styles/variables.scss';
+
+.text__content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  & h3 {
+    color: $yellow;
+    margin: 0;
+    margin-bottom: 32px;
+  }
+  & p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+  & li {
+    padding-left: 10px;
+    position: relative;
+    list-style: none;
+  }
+  & li::before {
+    position: absolute;
+    left: -37px;
+  }
+  & ul {
+    & li::before {
+      content: '\f141';
+      font-family: "Font Awesome 6 brands";
+      font: var(--fa-font-solid);
+      color: $yellow;
+    }
+  }
+  & > ol {
+    margin-top: 0;
+    counter-reset: item;
+    & > li {
+      counter-increment: list1;
+    }
+    & > li::before {
+      color: $yellow;
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 32px;
+      content: counter(list1);
+    }
+    & > ol {
+      padding-left: 0;
+      list-style: none;
+      & > li::before{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        color: #fff;
+        content: counter(list1) "." counter(list-item) ". ";
+      }
+    }
+    & .attention::before {
+      content: '!';
+      color: $yellow;
+    }
+  }
+}
